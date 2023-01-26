@@ -1,7 +1,8 @@
-
 tasks:
-  - init: npm install && npm run build
-    command: export HMR_HOST=`gp url 5173` && npm run dev
+  - init: npm install
+    command: |
+    export HMR_HOST=`gp url 5173`
+    npm run dev
 
 ports:
   - port: 5173
@@ -10,7 +11,11 @@ ports:
 
 vscode:
   extensions:
-    - svelte.svelte-vscode git repository to share the goodness with others.
+    - svelte.svelte-vscode
 
-# Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
+github:
+prebuilds:
+master: true
+branches: true
+pullRequests: true
 
